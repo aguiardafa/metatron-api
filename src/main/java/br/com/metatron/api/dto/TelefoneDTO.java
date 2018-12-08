@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package br.com.metatron.api.dto;
 
 /**
@@ -13,7 +8,6 @@ public class TelefoneDTO {
     private Long id;
     private String ddd;
     private String numero;
-    private UsuarioDTO usuario;
 
     public Long getId() {
         return id;
@@ -38,14 +32,5 @@ public class TelefoneDTO {
     public void setNumero(String numero) {
         this.numero = numero;
     }
-
-    public UsuarioDTO getUsuario() {
-        return usuario;
-    }
-
-    public void setUsuario(UsuarioDTO usuario) {
-        this.usuario = usuario;
-    }
-    
     
 }

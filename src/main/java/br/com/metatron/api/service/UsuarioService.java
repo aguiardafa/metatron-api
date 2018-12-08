@@ -8,7 +8,5 @@ import java.util.List;
  * @author diego
  */
 public interface UsuarioService {
-    Usuario findUsuario(Long id);
-    List<Usuario> findAllUsuarios();
-    List<Usuario> findAllUsuariosByNomeUsuarioNomeCargo(String nomeUsuario, String nomeCargo);
+    List<Usuario> findAllUsuarios(String nomeUsuario, String nomeCargo);
 }

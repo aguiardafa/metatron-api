@@ -1,22 +1,33 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package br.com.metatron.api.model;
 
-import br.com.metatron.api.dto.TelefoneDTO;
 import java.io.Serializable;
 import java.util.Objects;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
 
 /**
  *
  * @author diego
  */
+@Entity
+@Table(name="telefone")
 public class Telefone implements Serializable{
+    @Id
+    @Column(name = "id")
     private Long id;
+    
+    @Column(name = "ddd")
     private String ddd;
+    
+    @Column(name = "numero")
     private String numero;
+    
+    @OneToOne
+    @JoinColumn(name="id_usuario")
     private Usuario usuario;
 
     public Long getId() {
